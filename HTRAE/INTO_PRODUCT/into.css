@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* 수평 스크롤 방지 */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 여전히 100vh로 설정 */
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.mHeader {
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.mLogo {
+    transform: rotate(180deg); /* 회전 적용 */
+    text-align: center;
+    width: 175px;
+    height: 50px;
+    padding: 18px;
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow: auto; /* 스크롤을 허용 */
+        transform: rotate(180deg);
+        margin: 0; /* 회전 후 여백 제거 */
+    }
+
+    .mLogo {
+        padding: 20px;
+    }
+}
