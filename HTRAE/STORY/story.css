@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* 수평 스크롤 방지 */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 여전히 100vh로 설정 */
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.mHeader {
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.mLogo {
+    transform: rotate(180deg); /* 회전 적용 */
+    text-align: center;
+    width: 175px;
+    height: 50px;
+    padding: 18px;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.stepStory {
+    padding: 12px;
+}
+
+.storyUnderline {
+    display: inline-block;
+    position: relative;
+}
+
+.storyUnderline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.arrowLine {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 1.5%;
+}
+
+.allButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.allButton span {
+    margin-right: 3px;
+}
+
+.buttonContentWrap {
+    max-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 1.3%;
+}
+
+.buttonContent {
+    display: none;
+    width: 100px;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.buttonContent.active {
+    display: block;
+    margin: 0;
+    opacity: 1;
+}
+
+.buttonContent.active p {
+    text-align: center;
+    margin: 3px;
+}
+
+.underArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 430;
+    cursor: pointer;
+}
+
+.underArrowImg {
+    width: 35px;
+}
+
+.upArrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 430;
+}
+
+.upArrowImg {
+    transform: rotate(180deg);
+    width: 35px;
+}
+
+footer {
+    background-color: #F7F7F7;
+    text-align: center;
+    padding: 50px 30px;
+    margin-top: auto; /* 페이지 하단 고정 */
+    width: 100%;
+}
+
+.mFooterLogo {
+    transform: rotate(180deg); /* 회전 적용 */
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+.util {
+    justify-content: center;
+}
+
+.util ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.util li {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.list li span {
+    margin-right: 10px;
+}
+
+.mMainStorys {
+    display: none;
+}
+
+.mLabelStory {
+    text-align: end;
+}
+
+.mLabelDownButtonIcon {
+    width: 25px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.product {
+    padding: 20px;
+    width: calc(25% - 20px);
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* 고정된 높이 */
+}
+
+.product img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+}
+
+.productText {
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow: auto; /* 스크롤을 허용 */
+        transform: rotate(180deg);
+        margin: 0; /* 회전 후 여백 제거 */
+    }
+
+    .mLogo {
+        padding: 20px;
+    }
+
+    .product {
+        width: calc(35.6% - 20px);
+        height: 150px;
+        padding: 3px;
+    }
+
+    .productText {
+        font-size: 13px;
+        margin: 0px;
+    }
+
+    footer{
+        padding: 30px 10px;
+    }
+
+    footer ul {
+        font-size: 13px;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+}

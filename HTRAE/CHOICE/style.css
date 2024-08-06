@@ -1,0 +1,80 @@
+html {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; /* 변경된 부분: height -> min-height */
+	text-align: center;
+	margin: 0;
+	overflow: auto; /* 추가된 부분: 스크롤 가능하게 설정 */
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+/* .firstHeader{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 8px 12px;
+	border-bottom: 1px solid #000;
+}
+
+.FirstLogo {
+	font-size: 80px;
+	letter-spacing: 1mm;
+	margin: 25px;
+}
+
+.logo {
+	transform: rotate(180deg);
+	text-align: center;
+	width: 400px;
+	height: 50px;
+} */
+
+.firstChoice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 200px;
+	font-size: 100px;
+	font-weight: 400;
+}
+
+.firstChoice:hover {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	transform: scale(1.3);
+	transition: transform 0.3s ease;
+}
+
+/* 화면 크기 수정 필요 */
+@media screen and (max-width: 480px) {
+	body {
+		display: flex;
+		transform: rotate(180deg);
+		overflow: auto; /* 추가된 부분: 스크롤 가능하게 설정 */
+	}
+	.mFirstLogo {
+		font-size: 40px;
+		letter-spacing: 1mm;
+		margin: 25px;
+	}
+	.firstChoice {
+		font-size: 60px;
+		font-weight: 400;
+	}
+}

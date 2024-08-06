@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	/* transform: rotate(180deg); */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+}
+
+a{
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.mHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+	border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.mLogo {
+	transform: rotate(180deg);
+    text-align: center;
+    width: 175px;
+    height: 50px;
+    padding-right: 69px;
+}
+
+.mHeaderLeft {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mHeaderRgiht{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.accountImg{
+	height: 25px;
+	margin: 7px;
+}
+
+.cartImg{
+	height: 30px;
+}
+
+.x{
+	font-size: 600px;
+}
+
+.goToStep{
+	font-size: 90px;
+}

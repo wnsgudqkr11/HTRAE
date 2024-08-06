@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTRAE</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="nonmem.css">
+</head>
+
+<body id="layout">
+	<header class="mHeader">
+		<div class="mHeaderLeft"></div>
+		<div class="mLogoWrap">
+			<a href="../STEP/step.html">
+				<img src="/IMG/logo.svg" class="mLogo">
+			</a>
+		</div>
+		<div class="mHeaderRgiht">
+			<div>
+				<a href="/LOGIN/login.html">
+					<img src="/IMG/account.svg" class="accountImg">
+				</a>
+			</div>
+			<div>
+				<a href="/CART/cart.html">
+					<img src="/IMG/cart.svg" class="cartImg">
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="name">Check Order (Non-Member)</div>
+
+    <div class="check-container">
+        <form action="/check-order" method="POST">
+            <div class="form-group">
+                <label for="username">NAME</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="orderNumber">Number of order</label>
+                <input type="email" id="orderNumber" name="orderNumber" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn1">Check order</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

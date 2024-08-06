@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	/* transform: rotate(180deg); */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+}
+
+.mHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+	border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.mLogo{
+    transform: rotate(180deg);
+	text-align: center;
+	width: 175px;
+	height: 50px;
+	padding-right: 69px;
+}
+
+.mHeaderLeft {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mHeaderRgiht{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.accountImg{
+	height: 25px;
+	margin: 7px;
+}
+
+.cartImg{
+	height: 30px;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+.name {
+    font-size: 30px;
+    font-weight: 450;
+    margin: 120px 0px 70px;
+}
+
+.login-container {
+    width: 400px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 2px solid #007bff;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ccc;
+    color: #000;
+    text-align: center;
+}
+
+button:hover {
+	color: white;
+    background-color: grey;
+}
+
+.btn1 {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn1:hover {
+    color: white;
+    background-color: grey;
+}
+
+.btn2 {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: grey;
+}
+
+.btn2 a:hover {
+    color: white;
+    background-color: grey;
+}
+
+.links {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.links a {
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin: 2.5px;
+    font-weight: bold;
+    color: #000;
+}
+
+.agreeForm label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+
+/* 작은 화면 모바일 */
+@media screen and (max-width: 480px) {
+    body {
+        /* transform: rotate(180deg); */
+    }
+    .mLogo {
+        padding-left: 30px;
+    }
+    .mCartImg {
+        display: block;
+    }
+}

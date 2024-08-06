@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTRAE.JoinMember</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="joinmem.css">
+</head>
+
+<body id="layout">
+    <header class="mHeader">
+        <div class="mHeaderLeft"></div>
+        <div class="mLogoWrap">
+            <a href="../STEP/step.html">
+                <img src="/IMG/logo.svg" class="mLogo">
+            </a>
+        </div>
+        <div class="mHeaderRgiht">
+            <div>
+                <a href="/LOGIN/login.html">
+                    <img src="/IMG/account.svg" class="accountImg">
+                </a>
+            </div>
+            <div>
+                <a href="/CART/cart.html">
+                    <img src="/IMG/cart.svg" class="cartImg">
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="name">Join Membership</div>
+
+    <div class="login-container">
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Password Check</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required placeholder="010-1234-5678">
+            </div>
+            <div class="form-group">
+                <label for="postal_code">Postal code</label>
+                <input type="text" id="postal_code" name="postal_code" required readonly>
+                <button type="button" onclick="execDaumPostcode()">Find postal code
+                </button>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Detail Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+			<div class="form-group">
+				<label for="gender">Sex</label>
+				<select id="gender" name="gender" required>
+					<option value="">Choice</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+        </form>
+    </div>
+    <div class="agreeForm">
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <input type="checkbox" id="agree_all" name="agree_all">
+                <label for="agree_all">전체 동의</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms1" name="terms1" class="individual">
+                <label for="terms1">이용약관 동의 (필수)</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms2" name="terms2" class="individual">
+                <label for="terms2">개인정보 수집 및 이용 동의 (필수)</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms3" name="terms3" class="individual">
+                <label for="terms3">개인정보 제3자 제공 동의 (선택)</label>
+            </div>
+            <button type="submit">회원가입</button>
+        </form>
+    </div>
+    
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="joinmem.js"></script>
+</body>
+</html>
